@@ -1,0 +1,91 @@
+'use client';
+import { motion } from 'framer-motion';
+import { HiBadgeCheck } from 'react-icons/hi'; // Verified badge icon
+
+const Skills = () => {
+  const frontendSkills = [
+    { name: 'HTML5', level: 'Expert' },
+    { name: 'Next.js', level: 'Expert' },
+    { name: 'TypeScript', level: 'Expert' },
+    { name: 'Tailwind Css', level: 'Intermediate' },
+    { name: 'JavaScript', level: 'Expert' },
+    { name: 'React.js', level: 'Expert' },
+  ];
+
+  const backendSkills = [
+    { name: 'Node.js', level: 'Expert' },
+    { name: 'SQL', level: 'Intermediate' },
+    { name: 'Express.js', level: 'Expert' },
+    { name: 'Docker', level: 'Intermediate' },
+    { name: 'MongoDB', level: 'Expert' },
+    { name: 'Kubernetes', level: 'Intermediate' },
+  ];
+
+  return (
+    <section id='skill' className="py-20 px-4 relative ">
+         
+      {/* Header */}
+      <div className="text-center mb-16">
+        <h2 className="text-4xl font-bold  ">Skills</h2>
+        <p className="  mt-2 text-sm font-medium">My Technical Level</p>
+      </div>
+
+      {/* Skills Container */}
+      <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-18">
+        
+        {/* Frontend Card */}
+        <motion.div 
+          initial={{ opacity: 0, x: -30 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6 }}
+          className=" group relative border overflow-hidden border-gray-200/20 hover:scale-105 duration-300  shadow-xl backdrop-blur-3xl bg-black/2 dark:bg-white/5 shadow-black/20 dark:shadow-white/15 rounded-[2rem] p-8 md:p-12"
+        >
+          <span className='absolute top-0 left-0 w-[20%] h-[20%] bg-cyan-200 dark:bg-black blur-3xl'></span>
+          <span className='absolute top-0 right-0 w-[20%] h-[20%] bg-cyan-200 dark:bg-black blur-3xl'></span>
+          <span className='absolute bottom-0 right-0 w-[20%] h-[20%] bg-cyan-200 dark:bg-black blur-3xl'></span>
+          <span className='absolute bottom-0 left-0 w-[20%] h-[20%] bg-cyan-200 dark:bg-black blur-3xl'></span>
+          <h3 className="text-xl font-semibold text-center mb-10  ">Frontend Developer</h3>
+          <div className="grid grid-cols-2 gap-x-8 gap-y-6">
+            {frontendSkills.map((skill, index) => (
+              <div key={index} className="flex items-start gap-2 hover:scale-105 duration-300">
+                <HiBadgeCheck className="text-xl    text-cyan-400 mt-1" />
+                <div>
+                  <h4 className="font-bold   leading-tight">{skill.name}</h4>
+                  <p className="text-[12px]  ">{skill.level}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </motion.div>
+
+        {/* Backend Card */}
+        <motion.div 
+          initial={{ opacity: 0, x: 30 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6 }}
+          className=" overflow-hidden relative  border border-gray-200/20 hover:scale-105 duration-300  shadow-xl backdrop-blur-md bg-black/2 dark:bg-white/5 shadow-black/20 dark:shadow-white/15 rounded-[2rem] p-8 md:p-12"
+        >
+          <span className='absolute top-0 left-0 w-[20%] h-[20%] bg-cyan-200 dark:bg-black blur-3xl'></span>
+          <span className='absolute top-0 right-0 w-[20%] h-[20%] bg-cyan-200 dark:bg-black blur-3xl'></span>
+          <span className='absolute bottom-0 right-0 w-[20%] h-[20%] bg-cyan-200 dark:bg-black blur-3xl'></span>
+          <span className='absolute bottom-0 left-0 w-[20%] h-[20%] bg-cyan-200 dark:bg-black blur-3xl'></span>
+          <h3 className="text-xl font-semibold text-center mb-10  ">Backend Developer</h3>
+          <div className="grid grid-cols-2 gap-x-8 gap-y-6">
+            {backendSkills.map((skill, index) => (
+              <div key={index} className="flex items-start gap-2 hover:scale-105 duration-300">
+                <HiBadgeCheck className="text-xl text-cyan-400 mt-1" />
+                <div>
+                  <h4 className="font-bold   leading-tight">{skill.name}</h4>
+                  <p className="text-[12px]  ">{skill.level}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </motion.div>
+
+      </div>
+    </section>
+  );
+};
+
+export default Skills;

@@ -1,14 +1,11 @@
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+import {   Josefin_Sans } from "next/font/google";
+import "./globals.css"; 
+import { SmoothCursor } from "@/components/ui/smooth-cursor"
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const Josefin = Josefin_Sans({
   subsets: ["latin"],
+  weight: "400"
 });
 
 export const metadata = {
@@ -17,12 +14,18 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+
+
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={` ${Josefin.className}  h-full antialiased scrollbar-none`}
+
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="  min-h-full flex flex-col"> 
+        {/* <SmoothCursor /> */}
+       
+        {children}</body>
     </html>
   );
 }
