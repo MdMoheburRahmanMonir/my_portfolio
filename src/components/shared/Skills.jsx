@@ -7,18 +7,16 @@ const Skills = () => {
     { name: 'HTML5', level: 'Expert' },
     { name: 'Next.js', level: 'Expert' },
     { name: 'TypeScript', level: 'Expert' },
-    { name: 'Tailwind Css', level: 'Intermediate' },
+    { name: 'Tailwind Css', level: 'Expert' },
     { name: 'JavaScript', level: 'Expert' },
     { name: 'React.js', level: 'Expert' },
   ];
 
   const backendSkills = [
     { name: 'Node.js', level: 'Expert' },
-    { name: 'SQL', level: 'Intermediate' },
-    { name: 'Express.js', level: 'Expert' },
-    { name: 'Docker', level: 'Intermediate' },
     { name: 'MongoDB', level: 'Expert' },
-    { name: 'Kubernetes', level: 'Intermediate' },
+    { name: 'Express.js', level: 'Expert' },
+    { name: 'BetterAuth', level: 'Expert' }, 
   ];
 
   return (
