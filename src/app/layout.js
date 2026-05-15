@@ -23,7 +23,7 @@ export default function RootLayout({ children }) {
 
     >
       <body className="  min-h-full flex flex-col">
-        {/* <SmoothCursor /> */}
+        <SmoothCursor />
         <ToastContainer position="top-left" closeOnClick />
         {children}</body>
     </html>
