@@ -29,8 +29,8 @@ export const ResumeMotion = () => {
             target='_blank'
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="w-fit relative flex group overflow-hidden items-center gap-2 bg-cyan-600/80 px-8 py-4 rounded-2xl font-medium shadow-lg hover:bg-cyan-400 transition-colors"
-            onClick={() => toast('hello')}
+            className="w-fit my-6 relative flex group overflow-hidden items-center gap-2 bg-cyan-600/80 px-8 py-4 rounded-2xl font-medium shadow-lg hover:bg-cyan-400 transition-colors"
+            onClick={() => toast('Resume is downloading')}
         >
             <motion.span
                 initial={{ x: -45, rotate: 45 }}

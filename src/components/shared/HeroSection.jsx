@@ -9,6 +9,7 @@ import { AnimatedSpan, Terminal, TypingAnimation, } from "@/components/ui/termin
 import { FaGripfire } from "react-icons/fa";
 import { FiBriefcase } from "react-icons/fi";
 import Lenis from 'lenis'
+import { ResumeMotion } from "./Motion";
 
 const HeroSection = () => {
   useEffect(() => {
@@ -107,6 +108,7 @@ const HeroSection = () => {
                 I craft visually stunning, highly interactive, and user-centric digital experiences that live on the web. Let's turn your ideas into reality.
               </p>
             </motion.div>
+            <ResumeMotion  />
 
             <motion.div
               initial={{ opacity: 0, y: 20 }}
