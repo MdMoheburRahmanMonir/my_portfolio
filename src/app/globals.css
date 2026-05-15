@@ -133,12 +133,10 @@
     @apply font-sans;
     }
 }
+ 
 *{
-  box-sizing: border-box; 
-}
-/* *{
   cursor: none;
-} */
+}
 
 .profile-frame {
   width: 300px;

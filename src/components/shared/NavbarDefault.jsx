@@ -79,7 +79,7 @@ const NavbarDefault = () => {
                     </div>
                     <ul
                         tabIndex="-1"
-                        className="menu menu-lg text-2xl  dropdown-content dark:bg-white/5 bg-black/5 rounded-box z-1 mt-4 w-52 p-2 shadow">
+                        className="menu menu-lg text-2xl  dropdown-content dark:bg-white/50 bg-black/50 rounded-box z-1 mt-4 w-52 p-2 shadow">
                         {navItems.map((item) => (
                             <li
                                 key={item.id}
