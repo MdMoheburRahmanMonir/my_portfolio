@@ -1,11 +1,13 @@
-import React from 'react';
+"use client";  
 
-const loading = () => {
+const LoadingPage = ( ) => {
   return (
-    <div>
+    <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-white dark:bg-black">
+      
       <span className="loading loading-spinner text-info"></span>
+
     </div>
   );
 };
 
-export default loading;
+export default LoadingPage;

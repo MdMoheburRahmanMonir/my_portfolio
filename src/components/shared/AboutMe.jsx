@@ -34,9 +34,13 @@ const AboutMe = () => {
                         </div>
 
                         <p className="  leading-7 tracking-wide  mb-8 ">
-                            Proficient in React.js, Next.js, Redux, Node.js, and Docker, I build scalable, high-performance applications.
-                            Skilled in Prisma, Socket.IO, and Kubernetes, with expertise in MongoDB, PostgreSQL, and CI/CD pipelines,
-                            I deliver innovative real-time systems and impactful solutions.
+                            My programming journey started with curiosity and a passion for building modern and interactive web applications using React, Next.js, and backend technologies.
+                            <br />
+                            <br />
+                            I enjoy creating clean UI designs, smooth animations, and real-time applications while continuously exploring new technologies and improving my skills.
+                            <br />
+                            <br />
+                            Outside of programming, I love exploring creative designs, watching tech content, gaming, and turning innovative ideas into real digital experiences.
                         </p>
                         <ResumeMotion />
 
