@@ -32,7 +32,7 @@ const testimonials = [
 
 const ClientReview = () => {
   return (
-    <div id='ClientReview' className="py-12 w-full">
+    <div id='ClientReview' className="py-15 w-full">
       <div className=" w-11/12 mx-auto px-6">
          
         <div className="text-center mb-16">
@@ -62,7 +62,7 @@ const ClientReview = () => {
         >
           {testimonials.map((item) => (
             <SwiperSlide key={item.id}>
-              <div className="dark:bg-white/5 bg-black/5 shadow-black/20 dark:shadow-white/20 hover:shadow-black/5 hover:dark:shadow-white/5 border hover:scale-105 duration-300 delay-300 p-8 mb-10 rounded-[2rem] shadow-sm hover:shadow-2xl transition-shadow h-full flex flex-col">
+              <div className="dark:bg-white/5 bg-black/5 shadow-black/20 dark:shadow-white/20 hover:shadow-black/5 hover:dark:shadow-white/5 border hover:scale-105 duration-300 delay-300 p-8 mt-3 mb-10 rounded-[2rem] shadow-sm hover:shadow-2xl transition-shadow h-full flex flex-col">
                 <HiOutlineChatAlt2 className="text-3xl text-gray-800 dark:text-blue-500 mb-4" />
                 <span className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-6  ">
                   {item.review}

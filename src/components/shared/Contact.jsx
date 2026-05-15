@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { HiOutlineMail, HiOutlineChatAlt2 } from 'react-icons/hi';
 import { FaTelegramPlane, FaWhatsapp } from 'react-icons/fa';
 import { FiSend } from 'react-icons/fi';
+import { toast } from 'react-toastify';
 
 const Contact = () => {
   const contactOptions = [
@@ -109,6 +110,8 @@ const Contact = () => {
               <motion.button
                 whileTap={{ scale: 0.95 }}
                 className=" group relative overflow-hidden  bg-cyan-600/70 text-white px-10 py-5 w-full justify-center rounded-[1.2rem] font-bold flex items-center gap-3 hover:shadow-lg transition-all"
+                type='button'
+                onClick={() => toast("Massage sent successfully")}
               >
                 <motion.span
                   initial={{ x: -100, rotate: 45 }}

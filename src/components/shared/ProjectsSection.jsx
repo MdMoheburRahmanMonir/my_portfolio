@@ -2,8 +2,9 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FiGithub, FiExternalLink } from 'react-icons/fi';
-
-  const ProjectsSection = () => {
+import { image } from 'framer-motion/client';
+import { toast } from 'react-toastify';
+const ProjectsSection = () => {
     const [currentPage, setCurrentPage] = useState(1);
     const itemsPerPage = 4;
 
@@ -11,105 +12,89 @@ import { FiGithub, FiExternalLink } from 'react-icons/fi';
     const projectsData = [
         {
             id: 1,
-            title: 'Crypto App Landing Page',
-            category: 'Web App',
-            description: 'A fully responsive cryptocurrency landing page with real-time price tracking and modern UI.',
-            technologies: ['React', 'Tailwind', 'Framer Motion'],
-            github: 'https://github.com/your-username/repo',
-            live: 'https://your-live-demo.com',
-            image: '/myPhoto1.png'
+            title: 'Online Book Borrowing',
+            category: 'Library Management Web App',
+            description:
+                'A full-featured online book borrowing platform where users can browse books, view details, borrow and return books, and manage reading activities through a clean and responsive interface.',
+            technologies: ['React', 'Tailwind CSS', 'Firebase', 'MongoDB', 'Express.js', 'Node.js', 'JWT Authentication', 'Responsive Design'],
+            github: 'https://github.com/MdMoheburRahmanMonir/online_book_borrowing',
+            live: 'https://online-book-borrowing-alpha.vercel.app/',
+            image: '/onlineBookBorrowing.png'
         },
         {
             id: 2,
-            title: 'Crypto App Landing Page',
-            category: 'Web App',
-            description: 'A fully responsive cryptocurrency landing page with real-time price tracking and modern UI.',
-            technologies: ['React', 'Tailwind', 'Framer Motion'],
-            github: 'https://github.com/your-username/repo',
-            live: 'https://your-live-demo.com',
-            image: 'https://images.unsplash.com/photo-1621761191319-c6fb62004009?q=80&w=600&auto=format&fit=crop'
+            title: 'Dragon News',
+            category: 'News Portal',
+            description:
+                'Dragon News is a responsive and modern news portal platform where users can explore categorized news, authenticate securely, and enjoy a clean reading experience with dynamic routing and elegant UI.',
+            technologies: ['React', 'Firebase Auth', 'Tailwind CSS', 'DaisyUI', 'React Router', 'Framer Motion'],
+            github: 'https://github.com/MdMoheburRahmanMonir/dragon-news',
+            live: 'https://dragon-news-wuhi.vercel.app/',
+            image: '/DragonNews.png'
         },
         {
             id: 3,
-            title: 'Crypto App Landing Page',
-            category: 'Web App',
-            description: 'A fully responsive cryptocurrency landing page with real-time price tracking and modern UI.',
-            technologies: ['React', 'Tailwind', 'Framer Motion'],
-            github: 'https://github.com/your-username/repo',
-            live: 'https://your-live-demo.com',
-            image: 'https://images.unsplash.com/photo-1621761191319-c6fb62004009?q=80&w=600&auto=format&fit=crop'
+            title: 'DigiTools Platform',
+            category: 'Web Application',
+            description:
+                'A modern digital tools platform featuring productivity utilities, responsive UI, interactive user experience, and optimized performance with clean and scalable frontend architecture.',
+            technologies: ['React', 'Tailwind CSS', 'DaisyUI', 'React Router', 'ReactTostify'],
+            github: 'https://github.com/MdMoheburRahmanMonir/digitools-platform',
+            live: 'https://digitools-platform-lilac.vercel.app/',
+            image: '/digitools.png'
         },
         {
             id: 4,
-            title: 'Crypto App Landing Page',
-            category: 'Web App',
-            description: 'A fully responsive cryptocurrency landing page with real-time price tracking and modern UI.',
-            technologies: ['React', 'Tailwind', 'Framer Motion'],
-            github: 'https://github.com/your-username/repo',
-            live: 'https://your-live-demo.com',
-            image: 'https://images.unsplash.com/photo-1621761191319-c6fb62004009?q=80&w=600&auto=format&fit=crop'
+            title: 'BPL Dream 11',
+            category: 'Sports Web App',
+            description: 'A modern fantasy cricket team management application inspired by Dream11, where users can select players, manage coins, build teams, and enjoy an interactive and responsive sports experience.',
+            technologies: ['React', 'Tailwind CSS', 'DaisyUI', 'JavaScript', 'React Toastify', 'Responsive Design'],
+            github: 'https://github.com/MdMoheburRahmanMonir/bpl-dream-11',
+            live: 'https://bpl-dream-11-beta.vercel.app/',
+            image: '/bplDream11.png'
         },
         {
             id: 5,
-            title: 'Crypto App Landing Page',
+            title: 'Online calling service App',
             category: 'Web App',
-            description: 'A fully responsive cryptocurrency landing page with real-time price tracking and modern UI.',
-            technologies: ['React', 'Tailwind', 'Framer Motion'],
-            github: 'https://github.com/your-username/repo',
-            live: 'https://your-live-demo.com',
-            image: 'https://images.unsplash.com/photo-1621761191319-c6fb62004009?q=80&w=600&auto=format&fit=crop'
+            description: 'A fully responsive online calling page with real-time history tracking and modern UI.',
+            technologies: ['React', 'Tailwind', 'Next.js', 'BetterAuth', 'DaisyUI', 'HeroUi', 'ReactTostify', 'Framer Motion'],
+            github: 'https://github.com/MdMoheburRahmanMonir/keen_keeper_project',
+            live: 'https://keen-keeper-liard.vercel.app',
+            image: '/keenkeepar.png'
         },
         {
             id: 6,
-            title: 'Crypto App Landing Page',
-            category: 'Web App',
-            description: 'A fully responsive cryptocurrency landing page with real-time price tracking and modern UI.',
-            technologies: ['React', 'Tailwind', 'Framer Motion'],
-            github: 'https://github.com/your-username/repo',
-            live: 'https://your-live-demo.com',
-            image: 'https://images.unsplash.com/photo-1621761191319-c6fb62004009?q=80&w=600&auto=format&fit=crop'
+            title: 'Online Book Borrowing',
+            category: 'Library Management Web App',
+            description:
+                'A full-featured online book borrowing platform where users can browse books, view details, borrow and return books, and manage reading activities through a clean and responsive interface.',
+            technologies: ['React', 'Tailwind CSS', 'Firebase', 'MongoDB', 'Express.js', 'Node.js', 'JWT Authentication', 'Responsive Design'],
+            github: 'https://github.com/MdMoheburRahmanMonir/online_book_borrowing',
+            live: 'https://online-book-borrowing-alpha.vercel.app/',
+            image: '/onlineBookBorrowing.png'
         },
         {
             id: 7,
-            title: 'Crypto App Landing Page',
-            category: 'Web App',
-            description: 'A fully responsive cryptocurrency landing page with real-time price tracking and modern UI.',
-            technologies: ['React', 'Tailwind', 'Framer Motion'],
-            github: 'https://github.com/your-username/repo',
-            live: 'https://your-live-demo.com',
-            image: 'https://images.unsplash.com/photo-1621761191319-c6fb62004009?q=80&w=600&auto=format&fit=crop'
+            title: 'BPL Dream 11',
+            category: 'Sports Web App',
+            description: 'A modern fantasy cricket team management application inspired by Dream11, where users can select players, manage coins, build teams, and enjoy an interactive and responsive sports experience.',
+            technologies: ['React', 'Tailwind CSS', 'DaisyUI', 'JavaScript', 'React Toastify', 'Responsive Design'],
+            github: 'https://github.com/MdMoheburRahmanMonir/bpl-dream-11',
+            live: 'https://bpl-dream-11-beta.vercel.app/',
+            image: '/bplDream11.png'
         },
         {
             id: 8,
-            title: 'Crypto App Landing Page',
-            category: 'Web App',
-            description: 'A fully responsive cryptocurrency landing page with real-time price tracking and modern UI.',
-            technologies: ['React', 'Tailwind', 'Framer Motion'],
-            github: 'https://github.com/your-username/repo',
-            live: 'https://your-live-demo.com',
-            image: 'https://images.unsplash.com/photo-1621761191319-c6fb62004009?q=80&w=600&auto=format&fit=crop'
-        },
-        {
-            id: 9,
-            title: 'Crypto App Landing Page',
-            category: 'Web App',
-            description: 'A fully responsive cryptocurrency landing page with real-time price tracking and modern UI.',
-            technologies: ['React', 'Tailwind', 'Framer Motion'],
-            github: 'https://github.com/your-username/repo',
-            live: 'https://your-live-demo.com',
-            image: 'https://images.unsplash.com/photo-1621761191319-c6fb62004009?q=80&w=600&auto=format&fit=crop'
-        },
-        {
-            id: 10,
-            title: 'Crypto App Landing Page',
-            category: 'Web App',
-            description: 'A fully responsive cryptocurrency landing page with real-time price tracking and modern UI.',
-            technologies: ['React', 'Tailwind', 'Framer Motion'],
-            github: 'https://github.com/your-username/repo',
-            live: 'https://your-live-demo.com',
-            image: 'https://images.unsplash.com/photo-1621761191319-c6fb62004009?q=80&w=600&auto=format&fit=crop'
-        },
-         
+            title: 'Dragon News',
+            category: 'News Portal',
+            description:
+                'Dragon News is a responsive and modern news portal platform where users can explore categorized news, authenticate securely, and enjoy a clean reading experience with dynamic routing and elegant UI.',
+            technologies: ['React', 'Firebase Auth', 'Tailwind CSS', 'DaisyUI', 'React Router', 'Framer Motion'],
+            github: 'https://github.com/MdMoheburRahmanMonir/dragon-news',
+            live: 'https://dragon-news-wuhi.vercel.app/',
+            image: '/DragonNews.png'
+        } 
     ];
 
     const totalPages = Math.ceil(projectsData.length / itemsPerPage);
@@ -145,7 +130,7 @@ import { FiGithub, FiExternalLink } from 'react-icons/fi';
                                 >
                                     {/* Image Section */}
                                     <div className="relative aspect-video rounded-[2rem] overflow-hidden mb-6">
-                                        <img src={project.image} alt={project.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                                        <img src={project.image} alt={project.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
                                     </div>
 
                                     {/* Content Section */}
@@ -173,6 +158,7 @@ import { FiGithub, FiExternalLink } from 'react-icons/fi';
                                                 href={project.github}
                                                 target="_blank"
                                                 className="flex items-center gap-2 text-sm font-bold text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors"
+                                                onClick={() => toast(`Let's Explore my Repo`)}
                                             >
                                                 <FiGithub /> GitHub
                                             </a>
@@ -180,6 +166,7 @@ import { FiGithub, FiExternalLink } from 'react-icons/fi';
                                                 href={project.live}
                                                 target="_blank"
                                                 className="flex items-center gap-2 text-sm font-bold text-blue-600 dark:text-blue-400 hover:underline"
+                                                onClick={() => toast(`Let's Explore my Demo Web Page`)}
                                             >
                                                 <FiExternalLink /> Live Demo
                                             </a>
@@ -198,8 +185,8 @@ import { FiGithub, FiExternalLink } from 'react-icons/fi';
                             key={number}
                             onClick={() => setCurrentPage(number)}
                             className={`w-12 h-12 rounded-2xl font-bold transition-all ${currentPage === number
-                                    ? 'bg-black text-white dark:bg-blue-600'
-                                    : 'bg-gray-100 text-gray-400 dark:bg-gray-800'
+                                ? 'bg-black text-white dark:bg-blue-600'
+                                : 'bg-gray-100 text-gray-400 dark:bg-gray-800'
                                 }`}
                         >
                             {number}

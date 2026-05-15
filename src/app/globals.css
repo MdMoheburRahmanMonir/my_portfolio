@@ -174,3 +174,8 @@
         .dark .swiper-pagination-bullet-active {
           background: #3b82f6 !important; /* Blue color in dark mode */
         }
+
+.backBlur{
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+}

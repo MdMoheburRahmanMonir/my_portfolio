@@ -1,7 +1,7 @@
-import {   Josefin_Sans } from "next/font/google";
-import "./globals.css"; 
+import { Josefin_Sans } from "next/font/google";
+import "./globals.css";
 import { SmoothCursor } from "@/components/ui/smooth-cursor"
-
+import { ToastContainer   } from 'react-toastify';
 
 const Josefin = Josefin_Sans({
   subsets: ["latin"],
@@ -22,9 +22,9 @@ export default function RootLayout({ children }) {
       className={` ${Josefin.className}  h-full antialiased scrollbar-none`}
 
     >
-      <body className="  min-h-full flex flex-col"> 
+      <body className="  min-h-full flex flex-col">
         {/* <SmoothCursor /> */}
-       
+        <ToastContainer position="top-left" closeOnClick />
         {children}</body>
     </html>
   );

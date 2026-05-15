@@ -1,15 +1,18 @@
 'use client'
-import React, { useState } from 'react'; 
+import React, { useState } from 'react';
 import CourseCard from './CourseCard';
 import EducationTimeline from './EducationTimeline';
+import { toast } from 'react-toastify';
 
 const Education = () => {
     const [toggle, setToggle] = useState(true)
     const btnToggle = value => {
         if (value === 'Course') {
             setToggle(false)
-        }else if (value === 'Academic') {
+            toast('Here is my Course Achievement')
+        } else if (value === 'Academic') {
             setToggle(true)
+            toast('Here is my Educational Achievement')
         }
     }
     return (
@@ -24,7 +27,7 @@ const Education = () => {
                     Here is a brief overview of my educational background, showcasing my academic journey and achievements.
                 </p>
             </div>
- 
+
             <div className="flex justify-center mb-8">
                 <div className="  p-1 rounded-full flex items-center gap-2 dark:bg-white/20 bg-black/20 duration-300">
                     <button onClick={() => btnToggle('Academic')} className={`${toggle ? 'bg-cyan-400/90 shadow shadow-white/40  ' : ''}  px-6 py-2 rounded-full transition`}>
@@ -36,9 +39,9 @@ const Education = () => {
                 </div>
             </div>
 
-            { !toggle ? <CourseCard></CourseCard>
-            :<EducationTimeline></EducationTimeline>}
-            
+            {!toggle ? <CourseCard></CourseCard>
+                : <EducationTimeline></EducationTimeline>}
+
         </section>
     );
 };

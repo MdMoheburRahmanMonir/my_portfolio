@@ -1,5 +1,6 @@
 "use client"
 import { motion } from 'framer-motion'; 
+  import {   toast } from 'react-toastify';
 export const Divmotion = () => {
     return (
         <motion.div
@@ -29,6 +30,7 @@ export const ResumeMotion = () => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="w-fit relative flex group overflow-hidden items-center gap-2 bg-cyan-600/80 px-8 py-4 rounded-2xl font-medium shadow-lg hover:bg-cyan-400 transition-colors"
+            onClick={() => toast('hello')}
         >
             <motion.span
                 initial={{ x: -45, rotate: 45 }}
