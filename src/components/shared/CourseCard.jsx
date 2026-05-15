@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React from 'react';
 import { FaCode, FaCss3Alt, FaHtml5, FaJs, FaNodeJs, FaReact } from 'react-icons/fa';
 import { SiMongodb, SiTailwindcss } from 'react-icons/si';
