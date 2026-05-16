@@ -1,5 +1,6 @@
 "use client"
 import { motion } from 'framer-motion'; 
+import Image from 'next/image';
   import {   toast } from 'react-toastify';
 export const Divmotion = () => {
     return (
@@ -11,7 +12,9 @@ export const Divmotion = () => {
         >
             <div className="relative w-96 h-96 rounded-full ">
                 {/* Replace with your actual image path */}
-                <img
+                <Image
+                    height={384}
+                    width={300}
                     src="/about2.png"
                     alt="Profile"
                     className="w-full h-full bottom-0  absolute object-cover"

@@ -71,7 +71,7 @@ const CourseCard = () => {
                         View Certificate
                     </a>
                     <div className="w-32 h-20 bg-gray-800 rounded-lg border border-gray-700 overflow-hidden">
-                        <img src="certificate-preview.jpg" alt="Panding" className="w-full h-full object-cover opacity-70 hover:opacity-100 transition" />
+                        <Image height={100} width={150} src="certificate-preview.jpg" alt="Panding" className="w-full h-full object-cover opacity-70 hover:opacity-100 transition" />
                     </div>
                 </div>
             </div>

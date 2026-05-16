@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { FiGithub, FiExternalLink } from 'react-icons/fi';
 import { image } from 'framer-motion/client';
 import { toast } from 'react-toastify';
+import Image from 'next/image';
 const ProjectsSection = () => {
     const [currentPage, setCurrentPage] = useState(1);
     const itemsPerPage = 4;
@@ -130,7 +131,7 @@ const ProjectsSection = () => {
                                 >
                                     {/* Image Section */}
                                     <div className="relative aspect-video rounded-[2rem] overflow-hidden mb-6">
-                                        <img src={project.image} alt={project.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                                        <Image height={300} width={400} src={project.image} alt={project.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
                                     </div>
 
                                     {/* Content Section */}

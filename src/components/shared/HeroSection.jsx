@@ -211,7 +211,7 @@ const HeroSection = () => {
                       interpolation-decay="300"
                       style={{ width: "120%", height: "120%" }}
                     >
-                    </model-viewer> : <img src={'/myPhoto1.png'} className=" w-[80%] h-[80%] absolute -bottom-2" alt="My Image" />
+                    </model-viewer> : <Image width={300} height={300} src={'/myPhoto1.png'} className=" w-[80%] h-[80%] absolute -bottom-2" alt="My Image" />
                 }
               </div>
               <div
