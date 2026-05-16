@@ -71,7 +71,7 @@ const Skills = () => {
     {
       name: 'BetterAuth',
       level: 'Expert',
-      icon: <SiBetterauth  className="text-black text-xl mt-1" />,
+      icon: <SiBetterauth  className="text-black dark:text-white/70 text-xl mt-1" />,
     },
   ];
 
