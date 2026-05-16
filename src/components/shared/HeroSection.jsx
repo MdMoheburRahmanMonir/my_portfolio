@@ -99,8 +99,10 @@ const HeroSection = () => {
 
               </h1>
               <h2 className="flex gap-2 text-center justify-center md:justify-start lg:justify-start text-2xl">
-                I am
-                <p href="https://git.io/typing-svg">
+                <p className="pt-1">
+                  I am
+                </p>
+                <p href="https://git.io/typing-svg ">
                   <img src="https://readme-typing-svg.herokuapp.com?font=Josefin+Sans&weight=500&duration=2500&pause=1000&color=00BCD4&random=true&width=250&lines=Frontend+Designer;Backend+Developer;MERN+Stack+Dev" alt="Typing SVG" />
                 </p>
               </h2>
@@ -108,7 +110,7 @@ const HeroSection = () => {
                 I craft visually stunning, highly interactive, and user-centric digital experiences that live on the web. Let's turn your ideas into reality.
               </p>
             </motion.div>
-            <ResumeMotion  />
+            <ResumeMotion />
 
             <motion.div
               initial={{ opacity: 0, y: 20 }}
