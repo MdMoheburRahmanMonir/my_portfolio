@@ -107,7 +107,6 @@ const HeroSectionComponent = () => {
                                 I craft visually stunning, highly interactive, and user-centric digital experiences that live on the web. Let's turn your ideas into reality.
                             </p>
                         </motion.div>
-                        <ResumeMotion />
 
                         <motion.div
                             initial={{ opacity: 0, y: 20 }}
@@ -128,6 +127,7 @@ const HeroSectionComponent = () => {
 
                             </Terminal>
                         </motion.div>
+                        <ResumeMotion />
                     </div>
 
                     {/* Right Side: Visual Card */}
